@@ -898,3 +898,253 @@ padding: 90px 8%;
     border-color: #00F5A0;
 }
 
+/*SLIDESHOW*/
+
+
+.slideshow{
+    padding: 140px 8%;
+    background: #040912;
+    text-align: center;
+    color: white;
+}
+
+.slideshow h2{
+    font-size: 70px;
+    margin-bottom: 50px;
+    font-family: "Playfair Display", serif;
+}
+
+#slide{
+    width: 900px;
+    max-width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 30px;
+
+    border: 1px solid rgba(0,245,160,0.2);
+
+    box-shadow:
+    0 0 40px rgba(0,245,160,0.1);
+}
+
+/*  FORMULÁRIO */
+
+.contato{
+    padding: 140px 8%;
+    background: #07111f;
+    text-align: center;
+    color: white;
+}
+
+.contato h2{
+    font-size: 70px;
+    margin-bottom: 50px;
+    font-family: "Playfair Display", serif;
+}
+
+#formulario{
+    max-width: 500px;
+    margin: auto;
+}
+
+#formulario input{
+    width: 100%;
+    padding: 18px;
+    margin-bottom: 20px;
+
+    border: 1px solid rgba(0,245,160,0.2);
+
+    border-radius: 15px;
+
+    background: rgba(255,255,255,0.04);
+
+    color: white;
+
+    outline: none;
+}
+
+#formulario input::placeholder{
+    color: #bdbdbd;
+}
+
+#formulario button{
+    width: 100%;
+
+    padding: 18px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background: #00F5A0;
+
+    color: #08101e;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#formulario button:hover{
+    transform: scale(1.03);
+
+    box-shadow: 0 0 20px #00F5A0;
+}
+
+/* QUIZ */
+
+.quiz{
+    padding: 140px 8%;
+    background: #040912;
+    text-align: center;
+    color: white;
+}
+
+.quiz h2{
+    font-size: 70px;
+    margin-bottom: 50px;
+    font-family: "Playfair Display", serif;
+}
+
+#pergunta{
+    font-size: 30px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+#respostas button{
+    width: 450px;
+    max-width: 90%;
+
+    padding: 16px;
+
+    margin: 10px;
+
+    border: 1px solid rgba(0,245,160,0.2);
+
+    border-radius: 15px;
+
+    background: rgba(255,255,255,0.03);
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#respostas button:hover{
+    border-color: #00F5A0;
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 0 20px rgba(0,245,160,0.2);
+}
+
+#proxima{
+    padding: 15px 35px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #00F5A0;
+
+    color: #08101e;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#proxima:hover{
+    transform: scale(1.05);
+
+    box-shadow: 0 0 20px #00F5A0;
+}
+
+#resultado{
+    margin-top: 40px;
+
+    font-size: 28px;
+
+    color: #00F5A0;
+
+    font-weight: bold;
+}
+
+/* RESPONSIVO*/
+
+@media (max-width: 768px){
+
+    .temas h2,
+    .slideshow h2,
+    .contato h2,
+    .quiz h2{
+        font-size: 45px;
+    }
+
+    #pergunta{
+        font-size: 22px;
+    }
+
+    #slide{
+        height: 280px;
+    }
+}
+
+/* TEMA PADRÃO */
+
+.tema-azul{
+    background: #050b14;
+}
+
+/* TEMA VERDE */
+
+.tema-verde{
+    background: #062b1f;
+}
+
+.tema-verde .problema,
+.tema-verde .tecnologia,
+.tema-verde .objetivos,
+.tema-verde .beneficios,
+.tema-verde .quiz,
+.tema-verde .slideshow{
+    background: #062b1f;
+}
+
+.tema-verde .publico,
+.tema-verde .contato,
+.tema-verde .temas,
+.tema-verde .aplicacao{
+    background: #0b3a2a;
+}
+
+/* TEMA ROXO */
+
+.tema-roxo{
+    background: #1f1238;
+}
+
+.tema-roxo .problema,
+.tema-roxo .tecnologia,
+.tema-roxo .objetivos,
+.tema-roxo .beneficios,
+.tema-roxo .quiz,
+.tema-roxo .slideshow{
+    background: #1f1238;
+}
+
+.tema-roxo .publico,
+.tema-roxo .contato,
+.tema-roxo .temas,
+.tema-roxo .aplicacao{
+    background: #311b59;
+}
