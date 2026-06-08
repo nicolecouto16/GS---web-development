@@ -37,9 +37,7 @@ tema3.addEventListener("click", function(){
 const slide = document.getElementById("slide");
 
 let imagens = [
-    "img/slide1.jpg",
-    "img/slide2.jpg",
-    "img/slide3.jpg"
+    
 ];
 
 let indice = 0;
