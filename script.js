@@ -31,3 +31,27 @@ tema3.addEventListener("click", function(){
 
 });
 
+
+//SLIDESHOW
+
+const slide = document.getElementById("slide");
+
+let imagens = [
+    "img/slide1.jpg",
+    "img/slide2.jpg",
+    "img/slide3.jpg"
+];
+
+let indice = 0;
+
+setInterval(function () {
+
+    indice++;
+
+    if (indice >= imagens.length) {
+        indice = 0;
+    }
+
+    slide.src = imagens[indice];
+
+}, 3000);
