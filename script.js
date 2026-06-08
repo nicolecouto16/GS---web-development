@@ -55,3 +55,24 @@ setInterval(function () {
     slide.src = imagens[indice];
 
 }, 3000);
+
+
+//FORMULÁRIO
+
+
+const formulario = document.getElementById("formulario");
+
+formulario.addEventListener("submit", function (event) {
+
+    event.preventDefault();
+
+    let nome = document.getElementById("nome").value.trim();
+    let email = document.getElementById("email").value.trim();
+
+    if (nome === "" || email === "") {
+        alert("Preencha todos os campos!");
+        return;
+    }
+
+    alert("Formulário enviado com sucesso!");
+});
