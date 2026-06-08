@@ -39,7 +39,7 @@ const slide = document.getElementById("slide");
 let imagens = [
     "img/estufa.png",
     "img/galaxia.png",
-   
+    "img/planeta.png"
 ];
 
 let indice = 0;
