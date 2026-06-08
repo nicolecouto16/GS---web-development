@@ -1,0 +1,1157 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #050b14;
+}
+
+/* HERO */
+
+.hero{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* IMAGEM HERO */
+
+.bg-img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* ESCURECER HERO */
+
+.overlay{
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* HEADER */
+
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 0 80px 0;
+    z-index: 5;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.95) 0%,
+        rgba(0,0,0,0.55) 25%,
+        rgba(0,0,0,0.15) 55%,
+        rgba(0,0,0,0.05) 75%,
+        transparent 100%
+    );
+}
+
+/* NAVBAR */
+
+.navbar{
+    position: relative;
+    z-index: 10;
+    padding-bottom: 40px;
+}
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LOGO */
+
+.logo{
+    color: white;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bold;
+    font-family: "Playfair Display", serif;
+}
+
+/* LINKS */
+
+.nav-links{
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a{
+    color: #EAFBF0;
+    text-decoration: none;
+
+    transition: 0.3s;
+
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+}
+
+.nav-links a:hover{
+    color: #00F5A0;
+    text-shadow: 0 0 8px #00F5A0;
+}
+
+/* BOTÃO MENU */
+
+.menu-btn{
+    display: none;
+
+    background: none;
+    border: none;
+
+    color: white;
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+/* CONTEÚDO HERO */
+
+.hero-content{
+    position: relative;
+    z-index: 3;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* BOTÃO */
+
+.hero-btn{
+    padding: 16px 38px;
+    background: #eeeeee;
+    color: #08101e;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 40px;
+    font-family: "Playfair Display", serif;
+    transition: 0.3s;
+}
+
+.hero-btn:hover{
+    background: #00F5A0;
+
+    transform: scale(1.05);
+
+    box-shadow: 0 0 20px #00F5A0;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 768px){
+
+    .menu-btn{
+        display: block;
+    }
+
+    .nav-links{
+        display: none;
+
+        flex-direction: column;
+
+        position: absolute;
+
+        top: 70px;
+        right: 5%;
+
+        background: #111;
+
+        width: 220px;
+
+        padding: 20px;
+
+        border-radius: 10px;
+    }
+
+    .nav-links.active{
+        display: flex;
+    }
+
+    .problema-titulo h2{
+        font-size: 45px;
+    }
+
+    .card{
+        width: 100%;
+    }
+}
+
+/* SECTION PROBLEMA */
+
+.problema{
+    position: relative;
+    overflow: hidden;
+
+    padding: 120px 8%;
+
+    color: white;
+}
+
+/* IMAGEM DE FUNDO */
+
+.problema-bg{
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: 1;
+
+    opacity: 0.3;
+}
+
+/* ESCURECER */
+
+.problema-overlay{
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0,0,0,0.75);
+
+    z-index: 2;
+}
+
+/* CONTEÚDO */
+
+.problema-titulo,
+.cards-problema,
+.estatisticas{
+    position: relative;
+    z-index: 3;
+}
+
+/* TÍTULO */
+
+.problema-titulo{
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.problema-titulo span{
+    color: #00F5A0;
+
+    letter-spacing: 4px;
+
+    font-size: 14px;
+}
+
+.problema-titulo h2{
+    font-size: 70px;
+
+    margin: 15px 0;
+
+    font-family: "Playfair Display", serif;
+}
+
+.problema-titulo p{
+    max-width: 700px;
+
+    margin: auto;
+
+    color: #cfcfcf;
+
+    line-height: 1.7;
+}
+
+/* CARDS */
+
+.cards-problema{
+    display: flex;
+
+    gap: 30px;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 80px;
+}
+
+.card{
+    background: rgba(255,255,255,0.03);
+
+    border: 1px solid rgba(0,245,160,0.2);
+
+    width: 320px;
+
+    padding: 40px 30px;
+
+    border-radius: 25px;
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.4s;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+
+    border-color: #00F5A0;
+
+    box-shadow: 0 0 25px rgba(0,245,160,0.2);
+}
+
+.card h3{
+    font-size: 28px;
+
+    margin-bottom: 20px;
+
+    font-family: "Playfair Display", serif;
+}
+
+.card p{
+    color: #cfcfcf;
+
+    line-height: 1.7;
+}
+
+/* ESTATÍSTICAS */
+
+.estatisticas{
+    display: flex;
+
+    justify-content: center;
+
+    gap: 80px;
+
+    flex-wrap: wrap;
+
+    text-align: center;
+}
+
+.numero h2{
+    font-size: 70px;
+    color: #00F5A0;
+}
+
+.numero p{
+    color: #cfcfcf;
+    margin-top: 10px;
+}
+
+/* TECNOLOGIA */
+
+.tecnologia{
+    position: relative;
+
+    padding: 140px 8%;
+
+    background: #040912;
+
+    overflow: hidden;
+
+    color: white;
+}
+
+/* EFEITO FUNDO */
+
+.tecnologia::before{
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    background: #00F5A0;
+
+    filter: blur(180px);
+
+    opacity: 0.08;
+
+    top: -100px;
+    right: -100px;
+}
+
+/* TÍTULO */
+
+.tecnologia-titulo{
+    text-align: center;
+
+    margin-bottom: 80px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.tecnologia-titulo span{
+    color: #00F5A0;
+
+    letter-spacing: 5px;
+
+    font-size: 14px;
+}
+
+.tecnologia-titulo h2{
+    font-size: 70px;
+
+    margin: 15px 0;
+
+    font-family: "Playfair Display", serif;
+}
+
+.tecnologia-titulo p{
+    max-width: 700px;
+
+    margin: auto;
+
+    color: #cfcfcf;
+
+    line-height: 1.7;
+}
+
+/* CARDS */
+
+.cards-tecnologia{
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+/* TECNOLOGIA */
+
+.tecnologia{
+    position: relative;
+
+padding: 90px 8%;
+    background: linear-gradient(
+        to bottom,
+        #040912,
+        #07111f
+    );
+
+    overflow: hidden;
+
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+/* EFEITO BRILHO */
+
+.tecnologia::before{
+    content: "";
+
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    background: #00F5A0;
+
+    border-radius: 50%;
+
+    filter: blur(220px);
+
+    opacity: 0.08;
+
+    top: -200px;
+}
+
+/* TÍTULO */
+
+.tecnologia-titulo{
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 850px;
+}
+
+.tecnologia-titulo span{
+    color: #00F5A0;
+
+    letter-spacing: 6px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.tecnologia-titulo h2{
+    font-size: 90px;
+
+    margin: 20px 0;
+
+    font-family: "Playfair Display", serif;
+
+    line-height: 1.1;
+}
+
+/* LINHA BONITA */
+
+.tecnologia-titulo h2::after{
+    content: "";
+
+    display: block;
+
+    width: 120px;
+    height: 3px;
+
+    margin: 25px auto 0 auto;
+
+    background: #00F5A0;
+
+    border-radius: 20px;
+
+    box-shadow: 0 0 20px #00F5A0;
+}
+
+.tecnologia-titulo p{
+    margin-top: 35px;
+
+    color: #cfcfcf;
+
+    font-size: 20px;
+
+    line-height: 1.8;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 768px){
+
+    .tecnologia{
+        padding: 140px 8%;
+    }
+
+    .tecnologia-titulo h2{
+        font-size: 55px;
+    }
+}
+.tecnologia-titulo{
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 850px;
+
+    transform: translateY(-80px);
+}
+
+/* OBJETIVOS */
+
+.objetivos{
+    padding: 180px 8%;
+    background: #040912;
+    text-align: center;
+    color: white;
+}
+
+.objetivos span{
+    color: #00F5A0;
+    letter-spacing: 6px;
+    font-size: 14px;
+}
+
+.objetivos h2{
+    font-size: 110px;
+    margin: 20px 0;
+    font-family: "Playfair Display", serif;
+}
+
+.objetivos p{
+    max-width: 750px;
+    margin: auto;
+    font-size: 22px;
+    line-height: 1.8;
+    color: #cfcfcf;
+}
+
+
+/* PÚBLICO */
+
+.publico{
+    padding: 140px 8%;
+
+    background: #07111f;
+
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: left;
+}
+
+.publico-titulo{
+    max-width: 700px;
+}
+
+.publico-titulo span{
+    color: #00F5A0;
+
+    letter-spacing: 6px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.publico-titulo h2{
+    font-size: 75px;
+
+    margin: 20px 0;
+
+    font-family: "Playfair Display", serif;
+}
+
+.publico-titulo p{
+    color: #cfcfcf;
+
+    line-height: 1.8;
+
+    font-size: 20px;
+}
+
+/* BENEFÍCIOS */
+
+.beneficios{
+    padding: 130px 8%;
+
+    background: #040912;
+
+    color: white;
+
+    text-align: center;
+}
+
+.beneficios-titulo{
+    max-width: 850px;
+
+    margin: auto;
+}
+
+.beneficios-titulo span{
+    color: #00F5A0;
+
+    letter-spacing: 6px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.beneficios-titulo h2{
+    font-size: 80px;
+
+    margin: 20px 0;
+
+    font-family: "Playfair Display", serif;
+}
+
+.beneficios-titulo p{
+    color: #cfcfcf;
+
+    line-height: 1.8;
+
+    font-size: 20px;
+}
+
+/* APLICAÇÃO */
+
+.aplicacao{
+    position: relative;
+
+    padding: 160px 8%;
+
+    background: linear-gradient(
+        to bottom,
+        #07111f,
+        #02050a
+    );
+
+    overflow: hidden;
+
+    color: white;
+
+    text-align: center;
+}
+
+.aplicacao::before{
+    content: "";
+
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    background: #00F5A0;
+
+    border-radius: 50%;
+
+    filter: blur(220px);
+
+    opacity: 0.08;
+
+    top: -250px;
+    right: -150px;
+}
+
+.aplicacao-titulo{
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 850px;
+
+    margin: auto;
+}
+
+.aplicacao-titulo span{
+    color: #00F5A0;
+
+    letter-spacing: 6px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.aplicacao-titulo h2{
+    font-size: 90px;
+
+    margin: 20px 0;
+
+    font-family: "Playfair Display", serif;
+}
+
+.aplicacao-titulo p{
+    color: #cfcfcf;
+
+    line-height: 1.9;
+
+    font-size: 20px;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 768px){
+
+    .objetivos,
+    .publico,
+    .beneficios,
+    .aplicacao{
+        padding: 90px 8%;
+    }
+
+    .publico{
+        text-align: center;
+    }
+
+    .objetivos-titulo h2,
+    .publico-titulo h2,
+    .beneficios-titulo h2,
+    .aplicacao-titulo h2{
+        font-size: 50px;
+    }
+
+    .objetivos-titulo p,
+    .publico-titulo p,
+    .beneficios-titulo p,
+    .aplicacao-titulo p{
+        font-size: 17px;
+    }
+}
+
+/* FOOTER */
+
+.footer{
+    padding: 70px 8%;
+
+    background: #08101e;
+
+    border-top: 1px solid rgba(255,255,255,0.08);
+
+    text-align: center;
+
+    color: white;
+}
+
+.footer-content h2{
+    font-size: 45px;
+
+    margin-bottom: 15px;
+
+    font-family: "Playfair Display", serif;
+}
+
+.footer-content p{
+    color: #bdbdbd;
+
+    margin-bottom: 35px;
+
+    line-height: 1.7;
+}
+
+/* NOMES */
+
+.footer-nomes{
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.footer-nomes span{
+    padding: 12px 24px;
+
+    border: 1px solid rgba(0,245,160,0.2);
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.03);
+
+    color: #00F5A0;
+
+    transition: 0.3s;
+}
+
+.footer-nomes span:hover{
+    transform: translateY(-5px);
+
+    border-color: #00F5A0;
+
+    box-shadow: 0 0 20px rgba(0,245,160,0.2);
+}
+
+/* =========================
+   TEMAS
+========================= */
+
+.temas{
+    padding: 120px 8%;
+    background: #07111f;
+    text-align: center;
+    color: white;
+}
+
+.temas h2{
+    font-size: 70px;
+    margin-bottom: 40px;
+    font-family: "Playfair Display", serif;
+}
+
+.botoes-tema{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.botoes-tema button{
+    padding: 15px 35px;
+    border: 1px solid rgba(0,245,160,0.3);
+    border-radius: 40px;
+    background: rgba(255,255,255,0.03);
+    color: #00F5A0;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.botoes-tema button:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0,245,160,0.4);
+    border-color: #00F5A0;
+}
+
+/* =========================
+   SLIDESHOW
+========================= */
+
+.slideshow{
+    padding: 140px 8%;
+    background: #040912;
+    text-align: center;
+    color: white;
+}
+
+.slideshow h2{
+    font-size: 70px;
+    margin-bottom: 50px;
+    font-family: "Playfair Display", serif;
+}
+
+#slide{
+    width: 900px;
+    max-width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 30px;
+
+    border: 1px solid rgba(0,245,160,0.2);
+
+    box-shadow:
+    0 0 40px rgba(0,245,160,0.1);
+}
+
+/* =========================
+   FORMULÁRIO
+========================= */
+
+.contato{
+    padding: 140px 8%;
+    background: #07111f;
+    text-align: center;
+    color: white;
+}
+
+.contato h2{
+    font-size: 70px;
+    margin-bottom: 50px;
+    font-family: "Playfair Display", serif;
+}
+
+#formulario{
+    max-width: 500px;
+    margin: auto;
+}
+
+#formulario input{
+    width: 100%;
+    padding: 18px;
+    margin-bottom: 20px;
+
+    border: 1px solid rgba(0,245,160,0.2);
+
+    border-radius: 15px;
+
+    background: rgba(255,255,255,0.04);
+
+    color: white;
+
+    outline: none;
+}
+
+#formulario input::placeholder{
+    color: #bdbdbd;
+}
+
+#formulario button{
+    width: 100%;
+
+    padding: 18px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background: #00F5A0;
+
+    color: #08101e;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#formulario button:hover{
+    transform: scale(1.03);
+
+    box-shadow: 0 0 20px #00F5A0;
+}
+
+/* =========================
+   QUIZ
+========================= */
+
+.quiz{
+    padding: 140px 8%;
+    background: #040912;
+    text-align: center;
+    color: white;
+}
+
+.quiz h2{
+    font-size: 70px;
+    margin-bottom: 50px;
+    font-family: "Playfair Display", serif;
+}
+
+#pergunta{
+    font-size: 30px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+#respostas button{
+    width: 450px;
+    max-width: 90%;
+
+    padding: 16px;
+
+    margin: 10px;
+
+    border: 1px solid rgba(0,245,160,0.2);
+
+    border-radius: 15px;
+
+    background: rgba(255,255,255,0.03);
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#respostas button:hover{
+    border-color: #00F5A0;
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 0 20px rgba(0,245,160,0.2);
+}
+
+#proxima{
+    padding: 15px 35px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #00F5A0;
+
+    color: #08101e;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#proxima:hover{
+    transform: scale(1.05);
+
+    box-shadow: 0 0 20px #00F5A0;
+}
+
+#resultado{
+    margin-top: 40px;
+
+    font-size: 28px;
+
+    color: #00F5A0;
+
+    font-weight: bold;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 768px){
+
+    .temas h2,
+    .slideshow h2,
+    .contato h2,
+    .quiz h2{
+        font-size: 45px;
+    }
+
+    #pergunta{
+        font-size: 22px;
+    }
+
+    #slide{
+        height: 280px;
+    }
+}
+
+/* TEMA PADRÃO */
+
+.tema-azul{
+    background: #050b14;
+}
+
+/* TEMA VERDE */
+
+.tema-verde{
+    background: #062b1f;
+}
+
+.tema-verde .problema,
+.tema-verde .tecnologia,
+.tema-verde .objetivos,
+.tema-verde .beneficios,
+.tema-verde .quiz,
+.tema-verde .slideshow{
+    background: #062b1f;
+}
+
+.tema-verde .publico,
+.tema-verde .contato,
+.tema-verde .temas,
+.tema-verde .aplicacao{
+    background: #0b3a2a;
+}
+
+/* TEMA ROXO */
+
+.tema-roxo{
+    background: #1f1238;
+}
+
+.tema-roxo .problema,
+.tema-roxo .tecnologia,
+.tema-roxo .objetivos,
+.tema-roxo .beneficios,
+.tema-roxo .quiz,
+.tema-roxo .slideshow{
+    background: #1f1238;
+}
+
+.tema-roxo .publico,
+.tema-roxo .contato,
+.tema-roxo .temas,
+.tema-roxo .aplicacao{
+    background: #311b59;
+}
