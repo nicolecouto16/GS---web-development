@@ -39,7 +39,8 @@ const slide = document.getElementById("slide");
 let imagens = [
     "img/estufa.png",
     "img/galaxia.png",
-    "img/planeta.png"
+    "img/planeta.png",
+    "img/agricultura-espacial.jpeg"
 ];
 
 let indice = 0;
