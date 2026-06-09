@@ -5,7 +5,7 @@
 }
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background: #050b14;
 }
 
@@ -82,7 +82,7 @@ body{
     text-decoration: none;
     font-size: 28px;
     font-weight: bold;
-    font-family: "Playfair Display", serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* LINKS */
@@ -99,7 +99,7 @@ body{
 
     transition: 0.3s;
 
-    font-family: "Playfair Display", serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 20px;
 }
 
@@ -143,7 +143,7 @@ body{
     font-size: 22px;
     font-weight: bold;
     border-radius: 40px;
-    font-family: "Playfair Display", serif;
+    font-family: 'Montserrat', sans-serif;
     transition: 0.3s;
 }
 
@@ -265,7 +265,7 @@ body{
 
     margin: 15px 0;
 
-    font-family: "Playfair Display", serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .problema-titulo p{
@@ -321,7 +321,7 @@ body{
 
     margin-bottom: 20px;
 
-    font-family: "Playfair Display", serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .card p{
@@ -413,7 +413,7 @@ body{
 
     margin: 15px 0;
 
-    font-family: "Playfair Display", serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .tecnologia-titulo p{
@@ -511,7 +511,7 @@ padding: 90px 8%;
 
     margin: 20px 0;
 
-    font-family: "Playfair Display", serif;
+    font-family: 'Montserrat', sans-serif;
 
     line-height: 1.1;
 }
@@ -585,7 +585,7 @@ padding: 90px 8%;
 .objetivos h2{
     font-size: 110px;
     margin: 20px 0;
-    font-family: "Playfair Display", serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .objetivos p{
@@ -632,7 +632,7 @@ padding: 90px 8%;
 
     margin: 20px 0;
 
-    font-family: "Playfair Display", serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .publico-titulo p{
@@ -676,7 +676,7 @@ padding: 90px 8%;
 
     margin: 20px 0;
 
-    font-family: "Playfair Display", serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .beneficios-titulo p{
@@ -752,7 +752,7 @@ padding: 90px 8%;
 
     margin: 20px 0;
 
-    font-family: "Playfair Display", serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .aplicacao-titulo p{
@@ -812,7 +812,7 @@ padding: 90px 8%;
 
     margin-bottom: 15px;
 
-    font-family: "Playfair Display", serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .footer-content p{
@@ -871,7 +871,7 @@ padding: 90px 8%;
 .temas h2{
     font-size: 70px;
     margin-bottom: 40px;
-    font-family: "Playfair Display", serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .botoes-tema{
@@ -911,7 +911,7 @@ padding: 90px 8%;
 .slideshow h2{
     font-size: 70px;
     margin-bottom: 50px;
-    font-family: "Playfair Display", serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #slide{
@@ -939,7 +939,7 @@ padding: 90px 8%;
 .contato h2{
     font-size: 70px;
     margin-bottom: 50px;
-    font-family: "Playfair Display", serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #formulario{
@@ -1006,7 +1006,7 @@ padding: 90px 8%;
 .quiz h2{
     font-size: 70px;
     margin-bottom: 50px;
-    font-family: "Playfair Display", serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #pergunta{
